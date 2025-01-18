@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حكايات ممتعة للأطفال</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .story {
+      flex: 1 1 30%;
+      min-width: 280px;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+    <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- عنوان طفولي -->
+          <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+            <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+              📚
+            </span>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+              قصص الأطفال
+            </span>
+          </h1>
+      
+          <!-- قائمة التنقل -->
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+                  الرئيسية
+                </a>
+              </li>
+             
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main class="container mx-auto my-8">
+    <section class="text-center p-8 bg-gradient-to-r from-blue-200 to-green-200 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-4">مرحبًا بكم في عالم حكايات الأطفال</h2>
+      <p class="text-lg">اكتشفوا أجمل الحكايات الممتعة والمسلية للأطفال</p>
+    </section>
+
+    <section id="short-stories" class="my-12">
+      <h2 class="text-2xl font-bold mb-6">حكايات قصيرة</h2>
+      <div class="stories-container">
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2018/07/16/15/31/dog-3542195_640.png" alt="الكلب الصغير" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">قصة الكلب الصغير</h3>
+          <p class="text-gray-700">كان هناك كلب صغير يحب اللعب والجري في الحقول حتى ضاع يومًا. بدأ يشعر بالخوف لكنه قرر البحث عن طريق العودة. في رحلته، التقى بحيوانات مختلفة ساعدته في إيجاد طريقه، وعاد إلى المنزل بشجاعة وقلب مليء بالتجارب الجديدة.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('الكلب الصغير', 'nos-petites-histoires.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2013/07/13/11/34/owl-158411_640.png" alt="البومة الحكيمة" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">البومة الحكيمة</h3>
+          <p class="text-gray-700">في أعماق الغابة، عاشت بومة حكيمة كانت تقدم النصائح لجميع الحيوانات. ذات يوم، جاءت إليها سلحفاة بطيئة تعاني من مشكلات مع أصدقائها. علمتها البومة أهمية الصبر والمثابرة. بعد فترة، أصبحت السلحفاة رمزًا للحكمة في الغابة بفضل نصائح البومة.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' البومة الحكيمة', 'nos-petites-histoires.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2012/04/16/11/08/elephant-35527_640.png" alt="الفيل الشجاع" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">الفيل الشجاع</h3>
+          <p class="text-gray-700">في الغابة البعيدة، كان هناك فيل صغير يخاف من الأصوات العالية. ذات يوم، اشتعلت النيران في الغابة، وكان على الفيل أن يتغلب على خوفه لإنقاذ أصدقائه. بشجاعة كبيرة، قاد الحيوانات إلى مكان آمن، وأصبح البطل الذي تحدثت عنه كل الغابة.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' البومة الحكيمة', 'nos-petites-histoires.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2018/01/10/23/53/rabbit-3075088_640.png" alt="الأرنب الذكي" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">الأرنب الذكي</h3>
+          <p class="text-gray-700">في أحد الحقول، عاش أرنب صغير يستخدم ذكاءه للتغلب على الصعوبات. عندما حاول الثعلب الإمساك به، خطط الأرنب لفخ ذكي باستخدام الأغصان والأوراق. نجا الأرنب بذكائه، وأصبح حديث الغابة بفضل شجاعته وحنكته.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' الأرنب الذكي', 'nos-petites-histoires.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2018/02/26/11/13/cat-3182830_640.png" alt="القطة الفضولية" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">القطة الفضولية</h3>
+          <p class="text-gray-700">كانت قطة صغيرة تعيش في مزرعة مليئة بالأسرار. دائمًا ما كانت تتجول لاكتشاف أشياء جديدة. في أحد الأيام، اكتشفت صندوقًا غامضًا يحتوي على ألعاب قديمة. تعلمت القطة أن الفضول يقودها إلى مفاجآت رائعة، لكنها أيضًا يجب أن تكون حذرة.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' القطة الفضولية', 'nos-petites-histoires.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 حكايات الأطفال.   .</p>
+    </div>
+  </footer>
+</body>
+</html>

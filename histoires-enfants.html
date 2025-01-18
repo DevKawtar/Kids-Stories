@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حكايا الأطفال</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Flexbox setup for story layout */
+    .stories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; /* Gap between the stories */
+    }
+    .story {
+      flex: 1 1 30%; /* Each story takes up 30% of the width, adjusts with screen size */
+      min-width: 280px; /* Prevent stories from getting too small */
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+  <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- عنوان طفولي -->
+      <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+        <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+          📚
+        </span>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+          قصص الأطفال
+        </span>
+      </h1>
+  
+      <!-- قائمة التنقل -->
+      <nav>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+              الرئيسية
+            </a>
+        
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-8">
+    <!-- Hero Section -->
+    <section class="text-center p-8 bg-gradient-to-r from-blue-200 to-green-200 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-4">مرحبًا بكم في عالم حكايا الأطفال</h2>
+      <p class="text-lg">اكتشفوا أجمل الحكايات الممتعة والمسلية للأطفال</p>
+    </section>
+
+    <!-- Short Stories Section -->
+    <section id="short-stories" class="my-12">
+        <h2 class="text-2xl font-bold mb-6">حكايات قصيرة</h2>
+        <div class="stories-container">
+          <!-- Story 1 -->
+          <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+            <img src="https://cdn.pixabay.com/photo/2018/07/16/15/31/dog-3542195_640.png" alt="الكلب الصغير" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-4">قصة الكلب الصغير</h3>
+            <p class="text-gray-700">في أحد الأيام، كان هناك كلب صغير يعيش في أحد القرى. كان يحب اللعب مع الأطفال والجري في الحقول الخضراء. وفي أحد الأيام، قرر أن يذهب في مغامرة في الغابة المحيطة بالقرية.</p>
+            <p class="text-gray-700">بينما كان يتجول في الغابة، شعر بشيء غريب يحدث. فقد شعر بأنه قد ضاع عن طريقه ولم يعرف كيف يعود إلى قريته. لكن الكلب الصغير لم يستسلم، فبدأ في محاولة إيجاد طريقه باستخدام حواسه.</p>
+            <p class="text-gray-700">وبعد محاولات عديدة، نجح الكلب في العودة إلى قريته بسلام. ومن تلك اللحظة، تعلم الكلب الصغير أنه يجب عليه دائمًا أن يكون شجاعًا في مواجهة التحديات وأن يثق في نفسه.</p>
+            <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('الكلب الصغير  ', 'histoires-enfants.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+          </article>
+      
+          <!-- Story 2 -->
+          <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/11/34/owl-158411_640.png" alt="البومة الحكيمة" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-4">البومة الحكيمة</h3>
+            <p class="text-gray-700">في أحد الأيام، كانت بومة حكيمة تعيش في أعلى شجرة في الغابة. كانت تستمتع بمراقبة جميع الكائنات من حولها، وتعلم الكثير عن الحياة.</p>
+            <p class="text-gray-700">في أحد الأيام، اقترب منها عصفور صغير يسألها عن كيفية التغلب على خوفه. أجابت البومة بحكمة قائلة: "إذا أردت أن تكون شجاعًا، عليك أن تبدأ بالتدريب على مواجهات صغيرة أولًا."</p>
+            <p class="text-gray-700">سمع العصفور النصيحة وبدأ في مواجهة مخاوفه خطوة بخطوة، حتى أصبح أكثر شجاعة. وكان يشكر البومة كل يوم على حكمتها العميقة.</p>
+            <button 
+               class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+                onclick="addToFavorites('البومة الحكيمة  ', 'histoires-enfants.html')">
+              ⭐ أضف إلى المفضلة
+           </button>
+          </article>
+      
+          <!-- Story 3 -->
+          <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+            <img src="https://cdn.pixabay.com/photo/2012/04/16/11/08/elephant-35527_640.png" alt="الفيل الصغير" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-4">الفيل </h3>
+            <p class="text-gray-700">كان هناك فيل صغير يعيش في الغابة مع عائلته. كان يشعر بالخوف عندما يرى الحيوانات الكبيرة مثل الأسود والفهود، وكان يتجنبهم دائمًا.</p>
+            <p class="text-gray-700">لكن في أحد الأيام، تعرضت غابة الفيلة لمشكلة كبيرة وكان هناك خطر يهدد الجميع. شعر الفيل الصغير بأنه يجب عليه المساعدة. فبشجاعة، قرر أن يتحدى خوفه ويساعد عائلته وأصدقائه في حل المشكلة.</p>
+            <p class="text-gray-700">في النهاية، تمكن الفيل الصغير من تقديم المساعدة، وعرف أن القوة الحقيقية تكمن في قلبه الكبير وإرادته القوية.</p>
+            <button 
+            class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+             onclick="addToFavorites('الفيل الصغير  ', 'histoires-enfants.html')">
+           ⭐ أضف إلى المفضلة
+          </button>
+          </article>
+        </div>
+      </section>
+      
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 حكايا الأطفال. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+ 
+</body>
+</html>
+الصغير

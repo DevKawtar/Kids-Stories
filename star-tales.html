@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حكايات النجوم للأطفال</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #8ac1ff, #deebf3);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .story {
+      flex: 1 1 30%;
+      min-width: 280px;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+    <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- عنوان طفولي -->
+          <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+            <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+              📚
+            </span>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+              قصص الأطفال
+            </span>
+          </h1>
+      
+          <!-- قائمة التنقل -->
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+                  الرئيسية
+                </a>
+              </li>
+             
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main class="container mx-auto my-8">
+    <section class="text-center p-8 bg-gradient-to-r from-indigo-200 to-blue-200 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-4">مرحبًا بكم في عالم حكايات النجوم</h2>
+      <p class="text-lg">اكتشفوا قصص النجوم التي تضيء الليل وتأخذكم إلى عالم من الخيال</p>
+    </section>
+
+    <section id="star-stories" class="my-12">
+      <h2 class="text-2xl font-bold mb-6">قصص النجوم</h2>
+      <div class="stories-container">
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2016/03/31/14/48/star-1292832_640.png" alt="سر النجم اللامع" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">سر النجم اللامع</h3>
+          <p class="text-gray-700">في ليلة مظلمة، لاحظت فتاة صغيرة نجمًا يلمع أكثر من بقية النجوم. قررت أن تسأل جدها عن هذا النجم، فأخبرها أنه يحمل سرًا قديمًا. انطلقت الفتاة في مغامرة لمعرفة سر النجم، لتكتشف أن كل نجم يلمع يحمل أماني الناس الذين ينظرون إليه.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' سر النجم اللامع', 'star-tales.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2019/12/08/11/58/teddy-bear-4681043_640.png" alt="النجم والصديق القمر" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">النجم والصديق القمر</h3>
+          <p class="text-gray-700">كان هناك نجم صغير يحلم بأن يزور القمر يومًا ما. ذات ليلة، تحدث النجم مع القمر الذي كان يستمع لأحلامه. علمه القمر أن الأحلام تحتاج إلى صبر، وأنه يمكنه أن يحققها إذا أضاء السماء بكل طاقته. بدأ النجم يلمع أكثر فأكثر حتى أصبح مرئيًا بجانب القمر.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' النجم والصديق القمر', 'star-tales.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_640.jpg" alt="طريق النجوم" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">طريق النجوم</h3>
+          <p class="text-gray-700">في قرية صغيرة، كان هناك طفل يحب التحديق في السماء. في إحدى الليالي، لاحظ طريقًا من النجوم يمتد عبر السماء. اتبع الطفل هذا الطريق في حلمه، ليجد نفسه في عالم سحري مليء بالمغامرات. عندما استيقظ، أدرك أن النجوم يمكن أن تكون دليلًا لتحقيق أحلامه.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' طريق النجوم', 'star-tales.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2018/10/02/15/18/cloud-3719093_640.png" alt="النجوم الراقصة" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">النجوم الراقصة</h3>
+          <p class="text-gray-700">كانت هناك أسطورة تقول إن النجوم ترقص في السماء في الليالي السعيدة. ذات ليلة، خرجت فتاة صغيرة لرؤية هذا المشهد الساحر، ولكنها لم ترَ شيئًا. بدأت تغني بصوت عذب، وفجأة بدأت النجوم بالرقص على إيقاع أغنيتها، مضيفة جمالًا لا ينسى للسماء.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites(' النجوم الراقصة', 'star-tales.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2017/04/05/08/24/good-2204244_640.png" alt="حكاية النجم المسافر" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">حكاية النجم المسافر</h3>
+          <p class="text-gray-700">كان هناك نجم يحب السفر بين المجرات. في رحلته، قابل كواكب وأقمارًا وأشكالًا غريبة من الحياة. تعلم الكثير من حكم هذه العوالم المختلفة، وعاد إلى مكانه في السماء ليخبر النجوم الأخرى عن مغامراته، ملهمًا الجميع بأهمية الفضول والاكتشاف.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('المسافر حكاية النجم', 'nos-petites-histoires.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+ 
+  <footer class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 حكايات الأطفال.   .</p>
+    </div>
+  </footer>
+</body>
+</html>

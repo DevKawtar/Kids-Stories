@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قصص الأطفال</title>
+    <script src="index.js" defer></script>
+  <script src="https://cdn.tailwindcss.com" ></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- عنوان طفولي -->
+      <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+        <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+          📚
+        </span>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+          قصص الأطفال
+        </span>
+      </h1>
+  
+      <!-- قائمة التنقل -->
+      <nav>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+              الرئيسية
+            </a>
+          </li>
+          &spades;
+          <li>
+            <a href="#categories" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+              التصنيفات
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-8">
+<!-- Hero Section -->
+<section class="relative text-center p-8 bg-gradient-to-r from-yellow-300 via-red-300 to-blue-300 rounded-lg shadow-lg overflow-hidden">
+    <!-- خلفية متحركة -->
+    <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-blue-400 opacity-50 animate-gradient-x"></div>
+    
+    <!-- رسومات SVG متحركة -->
+    <div class="absolute -top-5 left-10">
+      <img src="https://cdn.pixabay.com/photo/2021/08/26/20/21/star-6577079_640.png" alt="نجمة" class="w-16 h-16 animate-spin-slow">
+    </div>
+    <div class="absolute -bottom-10 right-10">
+      <img src="https://cdn.pixabay.com/photo/2013/07/12/13/47/book-147292_640.png" alt="كتاب مفتوح" class="w-20 h-20 animate-bounce">
+    </div>
+  
+    <!-- النصوص -->
+    <h2 class="text-4xl font-extrabold mb-4 text-white drop-shadow-lg animate-fade-in">
+      مرحبًا بكم في عالم قصص الأطفال
+    </h2>
+    <p class="text-lg text-white font-medium drop-shadow-md animate-fade-in-delayed">
+      اكتشفوا أجمل القصص الممتعة والمفيدة للأطفال
+    </p>
+  
+    <!-- زر تفاعلي -->
+    <button class="mt-6 px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-110">
+      <a href="#categories">ابدأ الآن 🚀</a>
+    </button>
+  </section>
+  
+  <!-- Categories Section -->
+  <section id="categories" class="my-12">
+    <h2 class="text-2xl font-bold mb-6">التصنيفات</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- التصنيف الأول -->
+      <a href="monde-des-contes.html" class="block bg-white rounded-lg shadow-md p-4 text-center hover:scale-105 transition-all duration-300 fade-in">
+        <img src="https://cdn.pixabay.com/photo/2023/10/23/14/37/bee-8336245_960_720.png" alt="عالم القصص" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+        <h3 class="text-xl font-semibold mb-2 text-yellow-500">🌟 عالم القصص</h3>
+        <p class="text-sm text-gray-700">استمتعوا بعالم مليء بالمغامرات والحكايات.</p>
+      </a>
+  
+      <!-- التصنيف الثاني -->
+      <a href="histoires-enfants.html" class="block bg-white rounded-lg shadow-md p-4 text-center hover:scale-105 transition-all duration-300 fade-in">
+        <img src="https://cdn.pixabay.com/photo/2024/06/13/14/47/ai-generated-8827758_640.png" alt="حكايا الأطفال" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+        <h3 class="text-xl font-semibold mb-2 text-red-500">🧸 حكايا الأطفال</h3>
+        <p class="text-sm text-gray-700">قصص ممتعة ومسلية للأطفال.</p>
+      </a>
+  
+      <!-- التصنيف الثالث -->
+      <a href="bedtime-stories.html" class="block bg-white rounded-lg shadow-md p-4 text-center hover:scale-105 transition-all duration-300 fade-in">
+        <img src="https://cdn.pixabay.com/photo/2023/10/25/21/04/mouse-8341314_640.png" alt="قصص قبل النوم" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">🌙 قصص قبل النوم</h3>
+        <p class="text-sm text-gray-700">قصص هادئة وممتعة للنوم.</p>
+      </a>
+  
+      <!-- التصنيف الرابع -->
+      <a href="nos-petites-histoires.html" class="block bg-white rounded-lg shadow-md p-4 text-center hover:scale-105 transition-all duration-300 fade-in">
+        <img src="https://cdn.pixabay.com/photo/2016/03/31/15/21/alphabet-word-images-1293193_640.png" alt="قصصنا الصغيرة" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+        <h3 class="text-xl font-semibold mb-2 text-green-500">📚 قصصنا الصغيرة</h3>
+        <p class="text-sm text-gray-700">حكايات قصيرة وممتعة للأطفال.</p>
+      </a>
+  
+      <!-- التصنيف الخامس -->
+      <a href="magic-stories.html" class="block bg-white rounded-lg shadow-md p-4 text-center hover:scale-105 transition-all duration-300 fade-in">
+        <img src="https://cdn.pixabay.com/photo/2022/08/22/20/44/kid-7404537_640.png" alt="قصص السحر والعجائب" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+        <h3 class="text-xl font-semibold mb-2 text-yellow-600">✨ قصص السحر والعجائب</h3>
+        <p class="text-sm text-gray-700">استكشفوا عالم السحر والخيال.</p>
+      </a>
+  
+      <!-- التصنيف السادس -->
+      <a href="star-tales.html" class="block bg-white rounded-lg shadow-md p-4 text-center hover:scale-105 transition-all duration-300 fade-in">
+        <img src="https://cdn.pixabay.com/photo/2020/05/08/19/22/dwarf-5147047_640.png" alt="حكايات النجوم" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+        <h3 class="text-xl font-semibold mb-2 text-blue-400">⭐ حكايات النجوم</h3>
+        <p class="text-sm text-gray-700">قصص مستوحاة من جمال السماء والنجوم.</p>
+      </a>
+    </div>
+  </section>
+  <section id="favorites" class="my-12">
+    <h2 class="text-2xl font-bold mb-6">القصص المفضلة</h2>
+    <div id="favorites-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Les histoires favorites apparaîtront ici -->
+    </div>
+  </section>
+  
+    <!-- Story Section -->
+    <section class="my-12">
+      <h2 class="text-2xl font-bold mb-6">قصص مميزة</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="bg-white rounded-lg shadow-md p-4 hover:scale-105 transition-all duration-300">
+          <h3 class="text-xl font-semibold mb-2">الأرنب السريع والسلحفاة</h3>
+          <p class="text-sm text-gray-700">ذات مرة، كان هناك أرنب مغرور وسلحفاة بطيئة...</p>
+          <a href="story1.html" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">اقرأ المزيد</a>
+        </article>
+        <article class="bg-white rounded-lg shadow-md p-4 hover:scale-105 transition-all duration-300">
+          <h3 class="text-xl font-semibold mb-2">الأسد والفأر</h3>
+          <p class="text-sm text-gray-700">في يوم من الأيام، وقع أسد في شبكة صياد...</p>
+          <a href="story2.html" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">اقرأ المزيد</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="comments-section" class="my-12 bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">شارك تعليقك</h2>
+        <form id="commentForm" class="space-y-4">
+          <div>
+            <label for="username" class="block text-lg font-medium text-gray-700">اسم المستخدم</label>
+            <input 
+              type="text" 
+              id="username" 
+              name="username" 
+              class="w-full border border-gray-300 p-2 rounded focus:ring-blue-500 focus:border-blue-500" 
+              placeholder="أدخل اسمك" 
+              required>
+          </div>
+          <div>
+            <label for="comment" class="block text-lg font-medium text-gray-700">التعليق</label>
+            <textarea 
+              id="comment" 
+              name="comment" 
+              class="w-full border border-gray-300 p-2 rounded focus:ring-blue-500 focus:border-blue-500" 
+              rows="4" 
+              placeholder="اكتب تعليقك هنا..." 
+              required></textarea>
+          </div>
+          <button 
+            type="submit" 
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            إرسال
+          </button>
+        </form>
+      
+        <div id="commentsList" class="mt-6 space-y-4">
+          <h3 class="text-xl font-bold">التعليقات</h3>
+          <!-- Les commentaires seront affichés ici -->
+        </div>
+      </section>
+      
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 قصص الأطفال.  .</p>
+    </div>
+  </footer>
+
+ 
+</body>
+</html>

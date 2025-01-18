@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قصص قبل النوم</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #D9AFD9, #97D9E1);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .story {
+      flex: 1 1 30%;
+      min-width: 280px;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+  <!-- Header -->
+    <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- عنوان طفولي -->
+          <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+            <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+              📚
+            </span>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+              قصص الأطفال
+            </span>
+          </h1>
+      
+          <!-- قائمة التنقل -->
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+                  الرئيسية
+                </a>
+              </li>
+          
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-8">
+    <!-- Hero Section -->
+    <section class="text-center p-8 bg-gradient-to-r from-blue-200 to-green-200 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-4">مرحبًا بكم في عالم قصص الأطفال</h2>
+        <p class="text-lg">اكتشفوا أجمل القصص الممتعة والمفيدة للأطفال</p>
+      </section>
+
+    <!-- Bedtime Stories Section -->
+    <section id="bedtime-stories" class="my-12">
+        <h2 class="text-2xl font-bold mb-6">قصص مسلية قبل النوم</h2>
+        <div class="stories-container">
+          <!-- Story 1 -->
+          <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+            <img src="https://cdn.pixabay.com/photo/2023/10/20/19/25/moon-8330104_1280.png" alt="رحلة القمر الصغير" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-4">رحلة القمر الصغير</h3>
+            <p class="text-gray-700">في ليلة صافية، شعر القمر الصغير بالفضول حول الأرض وما يحدث عليها. قرر أن يهبط بهدوء ليستكشف العالم. قابل نجومًا تتألق وشاهد الأطفال يحلمون.</p>
+            <p class="text-gray-700">مع طلوع الشمس، عاد القمر الصغير إلى السماء ليحكي ما رأى لبقية النجوم. ومنذ ذلك الحين، صار يحلم كل ليلة بمغامرة جديدة.</p>
+            <button 
+            class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+            onclick="addToFavorites('الصغير رحلة القمر  ', 'bedtime-stories.html')">
+            ⭐ أضف إلى المفضلة
+          </button>
+        </article>
+      
+          <!-- Story 2 -->
+          <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+            <img src="https://cdn.pixabay.com/photo/2013/07/12/14/05/shooting-star-147722_640.png" alt="النجم الذي أراد الطيران" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-4">النجم الذي أراد الطيران</h3>
+            <p class="text-gray-700">كان هناك نجم صغير يحلم بالطيران مثل الطيور. شعر بالحزن لأنه ثابت في مكانه. في أحد الليالي، أخبرته الرياح: "إنك تنير دروب الطيور، وهذا هو طيرانك الخاص."</p>
+            <p class="text-gray-700">شعر النجم بالرضا وعلم أن لكل شخص دوره المميز في هذا الكون.</p>
+            <button 
+            class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+            onclick="addToFavorites('الطيران الطيران النجم الذي أراد  ', 'bedtime-stories.html')">
+            ⭐ أضف إلى المفضلة
+          </button>
+        </article>
+      
+          <!-- Story 3 -->
+          <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+            <img src="https://cdn.pixabay.com/photo/2016/03/31/15/21/alphabet-word-images-1293193_640.png" alt="الطفل وحلم الغابة" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-4">الطفل وحلم الغابة</h3>
+            <p class="text-gray-700">في إحدى الليالي، حلم طفل صغير بأنه في غابة ساحرة. الأشجار تتحدث والحيوانات تغني. في نهاية الحلم، أخبرته الغابة: "عد إلينا عندما تحتاج إلى الراحة."</p>
+            <p class="text-gray-700">استيقظ الطفل بابتسامة، وعرف أن الأحلام يمكن أن تكون عالمًا جميلًا.</p>
+            <button 
+            class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+            onclick="addToFavorites('الطفل وحلم الغابة  ', 'bedtime-stories.html')">
+            ⭐ أضف إلى المفضلة
+          </button>
+        </article>
+        </div>
+      </section>
+  </main>
+
+   <!-- Footer -->
+   <footer id="contact" class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 قصص الأطفال.  .</p>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

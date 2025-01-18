@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قصص السحر والعجائب للأطفال</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #A7BFE8, #D4FC79);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .story {
+      flex: 1 1 30%;
+      min-width: 280px;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+    <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- عنوان طفولي -->
+          <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+            <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+              📚
+            </span>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+              قصص الأطفال
+            </span>
+          </h1>
+      
+          <!-- قائمة التنقل -->
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+                  الرئيسية
+                </a>
+              </li>
+             
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main class="container mx-auto my-8">
+    <section class="text-center p-8 bg-gradient-to-r from-purple-200 to-pink-200 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-4">مرحبًا بكم في عالم السحر والعجائب</h2>
+      <p class="text-lg">اقرأوا أجمل الحكايات السحرية التي تأخذكم إلى عوالم الخيال</p>
+    </section>
+
+    <section id="magic-stories" class="my-12">
+      <h2 class="text-2xl font-bold mb-6">قصص السحر والعجائب</h2>
+      <div class="stories-container">
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2012/05/07/15/17/castle-48586_640.png" alt="قلعة النجوم السحرية" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">قلعة النجوم السحرية</h3>
+          <p class="text-gray-700">كان هناك في قديم الزمان قلعة تطفو في السماء، مليئة بالنجوم المتلألئة. كان يحكمها ملك حكيم يمتلك عصا سحرية تستطيع تحقيق الأمنيات. وفي أحد الأيام، أضاع الملك عصاه. انطلقت الأميرة الصغيرة في مغامرة عبر الغيوم والجبال لاستعادة العصا وإنقاذ القلعة من السقوط.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('قلعة النجوم السحرية', 'magic-stories.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2016/02/09/15/57/book-1189776_640.png" alt="الكتاب السحري" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">الكتاب السحري</h3>
+          <p class="text-gray-700">في مكتبة قديمة، عثر طفل صغير على كتاب سحري يحمل أسرار العالم. كلما قرأ صفحة، انتقل إلى عالم مختلف مليء بالمغامرات. في أحد الأيام، وجد نفسه محاصرًا داخل الكتاب، وكان عليه أن يحل الألغاز السحرية ليعود إلى منزله.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('الكتاب السحري', 'magic-stories.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2019/08/02/04/11/dragon-4378680_640.png" alt="التنين والصخرة العجيبة" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">التنين والصخرة العجيبة</h3>
+          <p class="text-gray-700">في غابة بعيدة، عاش تنين كبير يحرس صخرة عجيبة تمنح القوة لمن يلمسها. حاول العديد من الأبطال الاقتراب من الصخرة، لكن التنين كان يحميها بشدة. ذات يوم، جاء طفل صغير بقلب نقي، وتمكن من كسب ثقة التنين وحصل على الصخرة لمساعدة قريته.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('التنين والصخرة العجيبة', 'magic-stories.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2013/07/13/13/45/tux-161475_640.png" alt="الجنية الصغيرة" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">الجنية الصغيرة</h3>
+          <p class="text-gray-700">كانت هناك جنية صغيرة تعيش في زهرة داخل غابة سحرية. كانت تستخدم قوتها السحرية لمساعدة الحيوانات. في أحد الأيام، تعرضت الغابة لخطر كبير، فجمعت الجنية كل قواها لتعيد التوازن والسلام إلى الغابة، وأصبحت بطلة الغابة.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('الجنية الصغيرة ', 'magic-stories.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+
+        <article class="story bg-white rounded-lg shadow-md p-6 fade-in">
+          <img src="https://cdn.pixabay.com/photo/2020/08/31/06/57/mushroom-5531656_640.png" alt="باب العوالم السحرية" class="w-full h-64 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-4">باب العوالم السحرية</h3>
+          <p class="text-gray-700">اكتشف شاب صغير بابًا مخفيًا في قبو منزله يقود إلى عوالم سحرية مختلفة. في كل عالم، واجه تحديات ومغامرات مذهلة. وفي النهاية، وجد كنزًا سحريًا جعله يحول أحلامه إلى حقيقة.</p>
+          <button 
+          class="mt-2 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600" 
+          onclick="addToFavorites('السحرية باب العوالم ', 'magic-stories.html')">
+          ⭐ أضف إلى المفضلة
+        </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-purple-500 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 قصص السحر والعجائب.</p>
+    </div>
+  </footer>
+
+ 
+</body>
+</html>

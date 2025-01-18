@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأرنب السريع والسلحفاة</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f0f8ff, #e6e6fa);
+      font-family: 'Cairo', sans-serif;
+    }
+    header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+    }
+    section {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    img {
+      max-height: 200px;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-yellow-400 via-red-300 to-blue-400 p-6 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- عنوان طفولي -->
+      <h1 class="text-3xl font-bold text-white flex items-center space-x-2">
+        <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full shadow-lg animate-bounce">
+          📚
+        </span>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-500">
+          قصص الأطفال
+        </span>
+      </h1>
+  
+      <!-- قائمة التنقل -->
+      <nav>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="index.html" class="text-lg font-semibold text-white hover:underline hover:scale-110 transition-transform">
+              الرئيسية
+            </a>
+          </li>
+         
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-8">
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-4">الأرنب السريع والسلحفاة</h2>
+      <img src="https://img.freepik.com/free-vector/cute-rabbit-cartoon-character-vector_1308-140003.jpg?ga=GA1.1.89746242.1737155142&semt=ais_incoming" alt="سلحفات" class="w-30 h-30 animate-spin-slow">  
+          <p class="text-lg text-gray-700 mb-4">
+        في غابة بعيدة، كان هناك أرنب مغرور يفتخر بسرعته أمام جميع الحيوانات. في يوم من الأيام، قررت السلحفاة البطيئة أن تتحدى الأرنب في سباق. ضحك الأرنب وقال: "لا يمكن أن تفوزي عليّ!".
+      </p>
+      <img src="https://cdn.pixabay.com/photo/2015/11/03/22/32/turtle-1021521_640.png" alt="صورة سلحفاة" class="w-30 h-30 animate-spin-slow ">
+      <p class="text-lg text-gray-700 mb-4">
+        بدأ السباق، وركض الأرنب بسرعة فائقة حتى ابتعد عن السلحفاة. شعر بالغرور وقرر أن يأخذ قيلولة بجانب الطريق. بينما كان نائمًا، استمرت السلحفاة في المشي ببطء ولكن بثبات.
+      </p>
+      <img src="https://img.freepik.com/free-vector/race-line-with-start-banner-isolated_1308-87018.jpg?ga=GA1.1.89746242.1737155142&semt=ais_incoming" alt="صورة خط النهاية" class="w-30 h-30 animate-spin-slow">
+      <p class="text-lg text-gray-700 mb-4">
+        عندما استيقظ الأرنب، وجد أن السلحفاة كانت على وشك الوصول إلى خط النهاية. حاول اللحاق بها ولكنه وصل متأخرًا. فازت السلحفاة بالسباق وأثبتت أن المثابرة أهم من السرعة.
+      </p>
+      <p class="text-lg font-semibold text-gray-800">العبرة: المثابرة والعمل الجاد  يتغلبا على الغرور والكسل.</p>
+    </section>
+
+    <div class="mt-6 text-center">
+      <a href="index.html" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">العودة إلى الصفحة الرئيسية</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-500 text-white p-4 mt-8">
+    <div class="container mx-auto text-center">
+      <p>© 2025 قصص الأطفال.</p>
+    </div>
+  </footer>
+</body>
+</html>
